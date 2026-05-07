@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 import { supabase } from '../lib/supabase'
+import Link from 'next/link'
 
 type Ticket = {
   id: string
@@ -162,6 +163,8 @@ export default function Home() {
         <div>
           <h1 style={{ fontSize: '24px', fontWeight: '700', color: '#fff', margin: 0 }}>⚡ FAST</h1>
           <p style={{ fontSize: '11px', color: '#888', margin: 0 }}>Field Access Service Tracker</p>
+          <Link href="/customers" style={{ color: '#378ADD', fontSize: '12px', marginTop: '4px', display: 'block' }}>👥 Customers →</Link>
+      
         </div>
         <button
           onClick={() => { setShowForm(!showForm); setSelectedTicket(null) }}
